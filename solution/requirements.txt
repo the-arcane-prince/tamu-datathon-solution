@@ -58,7 +58,7 @@ langchain
 langchain-core
 langchain-google-genai
 langchain-text-splitters
-langsmith42
+langsmith
 libtorrent
 llama_cpp_python
 llama_models
@@ -137,7 +137,7 @@ typing_extensions
 tzdata
 uritemplate
 urllib3
-wcwidth3
+wcwidth
 Werkzeug
 Wikipedia-API
 xmod
