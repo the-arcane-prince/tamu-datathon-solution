@@ -1,5 +1,7 @@
-from app.lib.trained_llm import TrainedLLM
-from app.lib.word_association import WordAssociations
+from .lib.trained_llm import TrainedLLM
+from .lib.word_association import WordAssociations
+import json
+import re
 
 
 async def model(words, strikes, isOneAway, correctGroups, previousGuesses, error):
@@ -29,6 +31,8 @@ async def model(words, strikes, isOneAway, correctGroups, previousGuesses, error
             state = 'blue'
         case 3:
             state = 'purple'
+        case 4:
+            state = 'yellow'
             
     if state == 'purple':
         # Extract the four words that are not in the correctGroups
@@ -36,11 +40,18 @@ async def model(words, strikes, isOneAway, correctGroups, previousGuesses, error
     
     if state == 'blue':
         trained_llm = TrainedLLM()
-        return trained_llm.run(words, correctGroups), False
+        response = trained_llm.run2(words, correctGroups, previousGuesses)
+        cleaned_response = re.sub(r'```json|```', '', response.text).strip()
+        json_response = json.loads(cleaned_response)
+        return json_response, False
     
     if state == 'yellow':
         trained_llm = TrainedLLM()
-        return trained_llm.run(words, correctGroups), False
+        print('Yellow')
+        response = trained_llm.run(words, correctGroups, previousGuesses)
+        cleaned_response = re.sub(r'```json|```', '', response.text).strip()
+        json_response = json.loads(cleaned_response)
+        return json_response, False
     
     if state == 'green':
         wa = WordAssociations()

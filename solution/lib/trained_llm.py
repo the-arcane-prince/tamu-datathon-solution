@@ -522,7 +522,7 @@ You are a competitive Connections Coach that is helping players improve their pu
         return response
     
     def run2(self, words, solved_words, previous_guesses):
-        prompt = self.get_prompt3(words, solved_words, previous_guesses)
+        prompt = self.get_prompt_3(words, solved_words, previous_guesses)
         response = self.chat.send_message(prompt)
         
         print(response)
