@@ -62,14 +62,14 @@ langsmith
 libtorrent
 llama_cpp_python
 llama_models
-llama_stack2
+llama_stack
 lxml
 markdown-it-py
 MarkupSafe
 mdurl
 mpmath
 multidict
-multiprocess6
+multiprocess
 networkx
 numpy
 nvidia-cublas-cu12
@@ -90,7 +90,7 @@ pandas
 pillow
 pluggy
 polars
-prompt_toolkit8
+prompt_toolkit
 propcache
 proto-plus
 protobuf
@@ -121,7 +121,7 @@ scipy
 sentencepiece
 six
 sniffio
-SQLAlchemy6
+SQLAlchemy
 sympy
 tenacity
 termcolor
