@@ -104,12 +104,12 @@ Pygments
 pyparsing
 pytest
 pytest-asyncio
-python-dateutil.post
+python-dateutil
 python-dotenv
 pytz
 PyYAML
 readchar
-regex1.6
+regex
 requests
 requests-toolbelt
 rich
