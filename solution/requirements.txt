@@ -4,7 +4,7 @@ aiohappyeyeballs
 aiohttp
 aiosignal
 annotated-types
-anyio.post
+anyio
 async-timeout
 asyncio
 attrs
