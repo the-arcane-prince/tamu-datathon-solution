@@ -55,7 +55,7 @@ jsonpatch
 jsonpointer
 kwnlp-sql-parser
 langchain
-langchain-core5
+langchain-core
 langchain-google-genai
 langchain-text-splitters
 langsmith42
