@@ -30,9 +30,9 @@ Flask
 frozenlist
 fsspec
 gguf
-google-ai-generativelanguage0
+google-ai-generativelanguage
 google-api-core
-google-api-python-client.0
+google-api-python-client
 google-auth
 google-auth-httplib2
 google-generativeai
