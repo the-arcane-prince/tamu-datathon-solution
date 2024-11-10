@@ -1,5 +1,5 @@
-from .lib.trained_llm import TrainedLLM
-from .lib.word_association import WordAssociations
+from app.lib.trained_llm import TrainedLLM
+from app.lib.word_association import WordAssociations
 import json
 import re
 
@@ -55,6 +55,7 @@ async def model(words, strikes, isOneAway, correctGroups, previousGuesses, error
     
     if state == 'green':
         wa = WordAssociations()
-        return await wa.get_most_similar_words(words, 1), False
+        l = await wa.get_most_similar_words(words, 1)
+        return [x[0] for x in l[0][0]], False
     
     return [], True
